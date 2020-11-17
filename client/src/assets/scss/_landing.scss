@@ -1,9 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;900&display=swap');
 
 .landing {
-    background-color: red;
-    h1 {
-        margin: 0;
-        font-family: "Source Serif Pro"
+    background-color: $brand-color;
+    height: 100vh;
+    position: relative;
+
+    .landing-content {
+        font-family: "Source Serif Pro";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+        flex-direction: column;
+
+        h1 {
+            margin: 0;
+            font-size: 4em;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+        }
+
+        p {
+            font-size: 1.3em;
+            width: 20em;
+            text-align: center;
+            font-weight: 100em;
+        }
+    }
+
+    .landing-images {
+        position: absolute;
+        top: 50%;
+        img {
+            width: 10em;
+        }
     }
 }
