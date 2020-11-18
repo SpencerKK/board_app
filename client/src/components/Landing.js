@@ -10,14 +10,14 @@ const Landing = () => {
     return (
         <div className="landing">
             <div className="landing-content">
-                <h1>Moodboarder</h1>
-                <p>Conceptualize your next big project. Download your moodboard, or save it for later!</p>
+                <h1>moodboardr</h1>
+                <p>Conceptualize your next big project. Collab with creatives. Be inspired.</p>
             </div>
             <div className="landing-images">
-                {/* <img id="home-img-1" src={canserefoglu} alt="can-serefoglu" /> */}
+                <img id="home-img-1" src={canserefoglu} alt="can-serefoglu" />
                 <img id="home-img-2" src={eliapellegrini} alt="elia-pellegrini" />
-                {/* <img id="home-img-3" src={raphaelnast} alt="raphael-nast" />
-                <img id="home-img-4" src={shinjirice} alt="shinji-rice" /> */}
+                <img id="home-img-3" src={raphaelnast} alt="raphael-nast" />
+                <img id="home-img-4" src={shinjirice} alt="shinji-rice" />
             </div>
         </div>
     )
