@@ -1,4 +1,5 @@
 import React from "react";
+import Draggable, {DraggableCore} from 'react-draggable';
 
 // images
 import canserefoglu from "../assets/images/can-serefoglu.jpg";
@@ -14,10 +15,18 @@ const Landing = () => {
                 <p>Conceptualize your next big project. Collab with creatives. Be inspired.</p>
             </div>
             <div className="landing-images">
-                <img id="home-img-1" src={canserefoglu} alt="can-serefoglu" />
-                <img id="home-img-2" src={eliapellegrini} alt="elia-pellegrini" />
-                <img id="home-img-3" src={raphaelnast} alt="raphael-nast" />
-                <img id="home-img-4" src={shinjirice} alt="shinji-rice" />
+                <Draggable>
+                    <img src={canserefoglu} draggable="false" />
+                </Draggable>
+                <Draggable>
+                    <img src={eliapellegrini} draggable="false" />
+                </Draggable>
+                <Draggable>
+                    <img src={raphaelnast} draggable="false" />
+                </Draggable>
+                <Draggable>
+                    <img src={shinjirice} draggable="false" />
+                </Draggable>
             </div>
         </div>
     )
