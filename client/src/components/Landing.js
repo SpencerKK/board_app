@@ -1,5 +1,5 @@
 import React from "react";
-import Draggable, {DraggableCore} from 'react-draggable';
+import Draggable from 'react-draggable';
 
 // images
 import canserefoglu from "../assets/images/can-serefoglu.jpg";
@@ -16,16 +16,16 @@ const Landing = () => {
             </div>
             <div className="landing-images">
                 <Draggable>
-                    <img src={canserefoglu} draggable="false" />
+                    <img src={canserefoglu} draggable="false" alt="can-serfoglu" />
                 </Draggable>
                 <Draggable>
-                    <img src={eliapellegrini} draggable="false" />
+                    <img src={eliapellegrini} draggable="false" alt="elia-pellegrini" />
                 </Draggable>
                 <Draggable>
-                    <img src={raphaelnast} draggable="false" />
+                    <img src={raphaelnast} draggable="false" alt="raphael-nast" />
                 </Draggable>
                 <Draggable>
-                    <img src={shinjirice} draggable="false" />
+                    <img src={shinjirice} draggable="false" alt="shingi-rice" />
                 </Draggable>
             </div>
         </div>
