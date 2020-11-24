@@ -2,94 +2,74 @@
 
 .landing {
     height: 100vh;
-
-    .landing-content {
-        font-family: "Josefin Sans";
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 60vh;
-        flex-direction: column;
-
-        h1 {
-            z-index: 100;
-            margin: 0;
-            font-size: 4em;
-            color: $brand-color;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.336);
-        }
-
-        p {
-            font-size: 1.1em;
-            width: 20em;
-            text-align: center;
-            font-family: "Helvetica Neue";
-            font-weight: 200;
-            margin: 0.5em;
-        }
-    }
+    margin: 0 auto;
 
     .landing-images {
-        top: 50%;
+        height: 100vh;
+        // position: relative;
+        display: flex;
+        justify-content: center;
+
+        .landing-content {
+            position: fixed;
+            font-family: "Josefin Sans";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 40vh;
+            flex-direction: column;
+            z-index: 100;
+    
+            h1 {
+                z-index: 100;
+                margin: 0;
+                font-size: 4em;
+                color: $brand-color;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+            }
+    
+            p {
+                font-size: 1.1em;
+                width: 20em;
+                text-align: center;
+                font-family: "Helvetica Neue";
+                font-weight: 200;
+                margin: 0.5em;
+            }
+        }
+
         img {
             width: 10em;
-            position: absolute;
-            // z-index: -4;
             cursor: move;
-        }
-
-        #home-img-1 {
-            top: 25vh;
-            left: 15vw;
-            width: 15em;
-            transform: rotate(-20deg);
-        }
-
-        #home-img-2 {
-            width: 15em;
-            top: 40vh;
-            right: 20vw;
-            transform: rotate(20deg);
-        }
-
-        #home-img-3 {
-            width: 20vw;
-            top: 50vh;
-            left: 35vw;
-        }
-
-        #home-img-4 {
-            top: 65vh;
-            right: 35vw;
-            transform: rotate(-10deg);
+            align-self: center;
         }
     }
 }
 
-@media screen and (min-width: 2000px) {
-    .landing {
-        .landing-content {
-            h1 {
-                font-size: 6em;
-            }
-        }
+// @media screen and (min-width: 2000px) {
+//     .landing {
+//         .landing-content {
+//             h1 {
+//                 font-size: 6em;
+//             }
+//         }
 
-        .landing-images {
-            #home-img-1 {
-                width: 24em;
-            }
+//         .landing-images {
+//             #home-img-1 {
+//                 width: 24em;
+//             }
 
-            #home-img-2 {
-                width: 25em;
-            }
+//             #home-img-2 {
+//                 width: 25em;
+//             }
 
-            #home-img-3 {
-                width: 20em;
-            }
+//             #home-img-3 {
+//                 width: 20em;
+//             }
 
-            #home-img-4 {
-                width: 20em;
-            }
-        }
-    }
-}
+//             #home-img-4 {
+//                 width: 20em;
+//             }
+//         }
+//     }
+// }
