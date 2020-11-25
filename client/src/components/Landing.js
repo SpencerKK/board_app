@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Draggable from "react-draggable";
 
 // images
@@ -8,8 +8,10 @@ import raphaelnast from "../assets/images/raphael-nast.jpg";
 import shinjirice from "../assets/images/shingi-rice.jpg";
 
 const Landing = () => {
+    const [bg, setBg] = useState("#fff");
+
    return (
-      <div className="landing">
+      <div className="landing" style={{ backgroundColor: `${bg}` }}>
          <div className="landing-images">
             <div className="landing-content">
                <h1>moodboardr</h1>
@@ -17,6 +19,19 @@ const Landing = () => {
                   Conceptualize your next big project. Collab with creatives. Be
                   inspired.
                </p>
+               <div className="login-options">
+                  <button id="login-btn">Login</button>
+                  <button id="signup-btn">Sign up!</button>
+                  <p id="choose-bg">
+                     Change Background
+                     <input
+                        type="color"
+                        id="colorpicker"
+                        value={bg}
+                        onChange={e => setBg(e.target.value)}
+                     ></input>
+                  </p>
+               </div>
             </div>
             <Draggable>
                <span>
@@ -71,7 +86,7 @@ const Landing = () => {
                      style={{
                         transform: "rotate(-20deg)",
 
-                         top: "3em",
+                        top: "3em",
                         left: "15em",
                         width: "12em",
                      }}
