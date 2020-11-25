@@ -18,21 +18,40 @@ const Landing = () => {
                   inspired.
                </p>
             </div>
-            <Draggable bounds="parent">
-               <img src={canserefoglu} draggable="false" alt="can-serfoglu" />
+            <Draggable>
+                <span>
+                <img
+                  style={{ transform: "rotate(20deg)" }}
+                  id="landing-img-1"
+                  src={canserefoglu}
+                  draggable="false"
+                  alt="can-serfoglu"
+               />
+                </span>
             </Draggable>
-            <Draggable bounds="parent">
+            <Draggable>
                <img
+                  id="landing-img-2"
                   src={eliapellegrini}
                   draggable="false"
                   alt="elia-pellegrini"
                />
             </Draggable>
-            <Draggable bounds="parent">
-               <img src={raphaelnast} draggable="false" alt="raphael-nast" />
+            <Draggable>
+               <img
+                  id="landing-img-3"
+                  src={raphaelnast}
+                  draggable="false"
+                  alt="raphael-nast"
+               />
             </Draggable>
-            <Draggable bounds="parent">
-               <img src={shinjirice} draggable="false" alt="shingi-rice" />
+            <Draggable>
+               <img
+                  id="landing-img-4"
+                  src={shinjirice}
+                  draggable="false"
+                  alt="shingi-rice"
+               />
             </Draggable>
          </div>
       </div>
