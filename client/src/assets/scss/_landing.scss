@@ -3,6 +3,7 @@
 .landing {
     height: 100vh;
     margin: 0 auto;
+    overflow: hidden;
 
     .landing-images {
         height: 100vh;
@@ -13,7 +14,7 @@
         .landing-content {
             position: fixed;
             font-family: "Josefin Sans";
-            top: 40vh;
+            top: 30vh;
             z-index: 100;
     
             h1 {
@@ -38,26 +39,6 @@
             cursor: grab;
             position: absolute;
             width: 10em;
-            align-self: center;
-        }
-
-        #landing-img-1 {
-            top: 4em;
-        }
-
-        #landing-img-2 {
-            right: 4em;
-            width: 8em;
-        }
-
-        #landing-img-3 {
-            bottom: 3em;
-            left: 30em;
-        }
-
-        #landing-img-4 {
-            transform: rotate(40deg);
-            left: 20em;
         }
         
     }
