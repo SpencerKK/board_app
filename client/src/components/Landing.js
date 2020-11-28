@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Draggable from "react-draggable";
 
 // images
@@ -8,7 +9,7 @@ import raphaelnast from "../assets/images/raphael-nast.jpg";
 import shinjirice from "../assets/images/shingi-rice.jpg";
 
 const Landing = () => {
-    const [bg, setBg] = useState("#fff");
+   const [bg, setBg] = useState("#fff");
 
    return (
       <div className="landing" style={{ backgroundColor: `${bg}` }}>
@@ -21,14 +22,16 @@ const Landing = () => {
                </p>
                <div className="login-options">
                   <button id="login-btn">Login</button>
-                  <button id="signup-btn">Sign up!</button>
+                  <Link to="/sign-up">
+                     <button>Sign Up!</button>
+                  </Link>
                   <p id="choose-bg">
                      Change Background
                      <input
                         type="color"
                         id="colorpicker"
                         value={bg}
-                        onChange={e => setBg(e.target.value)}
+                        onChange={(e) => setBg(e.target.value)}
                      ></input>
                   </p>
                </div>

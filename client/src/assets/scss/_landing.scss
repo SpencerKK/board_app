@@ -63,6 +63,7 @@
                     input {
                         border: none;
                         padding: 0;
+                        margin-top: 0.4em;
 
                         &:active, &:focus, &:hover {
                             outline: none;
@@ -75,7 +76,6 @@
         img {
             cursor: grab;
             position: absolute;
-            width: 10em;
         }
         
     }

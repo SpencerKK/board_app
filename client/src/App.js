@@ -13,7 +13,9 @@ import { Provider } from "react-redux";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 
+// components
 import Landing from "./components/Landing";
+import SignUp from "./components/SignUp";
 
 const App = () => {
 
@@ -28,6 +30,7 @@ const App = () => {
         <div className="app">
           <Switch>
               <Route exact path="/" component={Landing} />
+              <Route exact path="/sign-up" component={SignUp} />
           </Switch>
         </div>
       </Router>
