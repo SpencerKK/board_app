@@ -16,6 +16,7 @@ import setAuthToken from "./utils/setAuthToken";
 // components
 import Landing from "./components/Landing";
 import SignUp from "./components/SignUp";
+import Home from "./components/Home";
 
 const App = () => {
 
@@ -31,6 +32,7 @@ const App = () => {
           <Switch>
               <Route exact path="/" component={Landing} />
               <Route exact path="/sign-up" component={SignUp} />
+              <Route exact path="/home" component={Home} />
           </Switch>
         </div>
       </Router>
