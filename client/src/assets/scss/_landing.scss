@@ -1,82 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 .landing {
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
+   height: 100vh;
+   margin: 0 auto;
+   overflow: hidden;
 
-    .landing-images {
-        height: 100vh;
-        // position: relative;
-        display: flex;
-        justify-content: center;
+   .landing-images {
+      height: 100vh;
+      // position: relative;
+      display: flex;
+      justify-content: center;
 
-        .landing-content {
-            position: fixed;
-            font-family: "Josefin Sans";
-            top: 30vh;
+      .landing-content {
+         position: fixed;
+         font-family: "Josefin Sans";
+         top: 30vh;
+         z-index: 100;
+
+         h1 {
             z-index: 100;
-    
-            h1 {
-                z-index: 100;
-                margin: 0;
-                font-size: 4em;
-                color: $brand-color;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+            margin: 0;
+            font-size: 4em;
+            color: $brand-color;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+         }
+
+         p {
+            font-size: 1.1em;
+            width: 20em;
+            text-align: center;
+            font-family: "Helvetica Neue";
+            font-weight: 200;
+            margin: 0.5em;
+         }
+
+         .login-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button {
+               width: 15em;
+               height: 3em;
+               border: 1px solid #000;
+               border-radius: 5px;
+               background-color: rgb(255, 255, 255);
+               margin: 0.4em 0;
+               cursor: pointer;
+
+               &:hover {
+                  background-color: #eee;
+               }
             }
-    
-            p {
-                font-size: 1.1em;
-                width: 20em;
-                text-align: center;
-                font-family: "Helvetica Neue";
-                font-weight: 200;
-                margin: 0.5em;
+
+            #choose-bg {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               font-size: 0.9em;
+               font-weight: 400;
+
+               input {
+                  border: none;
+                  padding: 0;
+                  margin-top: 0.4em;
+
+                  &:active,
+                  &:focus,
+                  &:hover {
+                     outline: none;
+                  }
+               }
             }
+         }
+      }
 
-            .login-options {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+      img {
+         cursor: grab;
+         position: absolute;
+      }
+   }
 
-                button {
-                    width: 15em;
-                    height: 3em;
-                    border: 1px solid #000;
-                    border-radius: 5px;
-                    background-color: rgb(255, 255, 255);
-                    margin: 0.4em 0;
-                    cursor: pointer;
+   .login-modal {
+      height: 100vh;
+      width: 100vw;
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.651);
+      animation-name: modal;
+      animation-duration: 0.2s;
 
-                    &:hover {
-                        background-color: #eee;
-                    }
-                }
+      form {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         width: 30em;
+         margin: 20vh auto 0 auto;
+         background: #fff;
+         border-radius: 5px;
+         padding: 2em;
 
-                #choose-bg {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    font-size: 0.9em;
-                    font-weight: 400;
-
-                    input {
-                        border: none;
-                        padding: 0;
-                        margin-top: 0.4em;
-
-                        &:active, &:focus, &:hover {
-                            outline: none;
-                        }
-                    }
-                }
-            }
-        }
-
-        img {
-            cursor: grab;
+         #x-wrapper {
+            background-color: $brand-color;
+            width: 1.2em;
             position: absolute;
-        }
-        
-    }
+            right: 0;
+            top: 0;
+            height: 100%;
+            transform: translate(15px);
+            border-radius: 0 5px 5px 0;
+            box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.466);
+            cursor: pointer;
+            transition: padding-left 0.2s;
+
+            #form-x {
+               margin: 0;
+               padding: 0;
+               transform: translate(4px, 5px);
+               transition: transform 0.2s;
+            }
+
+            &:hover {
+               padding-left: 1em;
+
+               #form-x {
+                  transform: translate(-4px, 5px);
+               }
+            }
+         }
+
+         label {
+            text-transform: uppercase;
+            font-size: 0.8em;
+            width: 80%;
+            margin: 0 auto;
+         }
+
+         input {
+            background: rgb(240, 240, 240);
+            border: none;
+            width: 80%;
+            margin: 0.5em auto 1em auto;
+            height: 3em;
+            padding: 0 0 0 0.5em;
+
+            &:focus {
+               outline: none;
+               background: rgb(226, 226, 226);
+            }
+         }
+
+         button {
+            width: 8em;
+            height: 2.8em;
+            margin: 0 auto;
+            border: none;
+            margin-top: 1.5em;
+            background-color: rgba(0, 0, 0, 0.822);
+            color: #fff;
+            border-radius: 10pc;
+            cursor: pointer;
+
+            &:hover {
+               background-color: rgba(0, 0, 0, 0.918);
+            }
+         }
+      }
+   }
+}
+
+@keyframes modal {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
 }

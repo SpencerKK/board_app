@@ -10,6 +10,7 @@ import shinjirice from "../assets/images/shingi-rice.jpg";
 
 const Landing = () => {
    const [bg, setBg] = useState("#fff");
+   const [loginDisplay, setLoginDisplay] = useState("none");
 
    return (
       <div className="landing" style={{ backgroundColor: `${bg}` }}>
@@ -21,7 +22,12 @@ const Landing = () => {
                   inspired.
                </p>
                <div className="login-options">
-                  <button id="login-btn">Login</button>
+                  <button
+                     id="login-btn"
+                     onMouseDown={() => setLoginDisplay("block")}
+                  >
+                     Login
+                  </button>
                   <Link to="/sign-up">
                      <button>Sign Up!</button>
                   </Link>
@@ -100,6 +106,18 @@ const Landing = () => {
                   />
                </span>
             </Draggable>
+         </div>
+         <div className="login-modal" style={{ display: `${loginDisplay}` }}>
+            <form>
+               <div id="x-wrapper" onClick={() => setLoginDisplay("none")}>
+                  <i className="fas fa-times" id="form-x"></i>
+               </div>
+               <label>Screen-Name or Email</label>
+               <input />
+               <label>Password</label>
+               <input />
+               <button>Sign In</button>
+            </form>
          </div>
       </div>
    );
