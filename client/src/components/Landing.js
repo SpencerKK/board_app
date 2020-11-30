@@ -24,7 +24,7 @@ const Landing = () => {
                <div className="login-options">
                   <button
                      id="login-btn"
-                     onMouseDown={() => setLoginDisplay("block")}
+                     onClick={() => setLoginDisplay("block")}
                   >
                      Login
                   </button>
